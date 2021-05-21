@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    protected $gurded = array('id');
+    protected $guarded = array('id');
     
     //
     public static $rules = array(
@@ -15,4 +15,9 @@ class Profile extends Model
         'hobby' => 'required',
         'introduction' => 'required',
     );
+    
+    public function logs()
+    {
+        return $this->hasMany('App\Log');
+    }
 }

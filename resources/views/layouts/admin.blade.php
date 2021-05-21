@@ -10,7 +10,7 @@
          <meta name="csrf-token" content="{{ csrf_token() }}">
          
         {{--各ページごとにtitleタグを入れるために@yieldで空けておきます。--}}
-        <title>@yield('tiitle')</title>
+        <title>@yield('title')</title>
         
         <!-- Scripts -->
          {{--Laravel標準で用意されているJavascriptを読み込みます --}}
@@ -22,7 +22,7 @@
         
         <!-- Styles -->
         {{-- Laravel標準で用意されているCSSを読み込みます --}}
-        <link herf="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
         {{-- この章の後半で作成するCSSを読み込みます --}}
         <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
     </head>

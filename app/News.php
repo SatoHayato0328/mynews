@@ -10,7 +10,13 @@ class News extends Model
     
     //
     public static $rules = array(
-        'tiitle' => 'required',
+        'title' => 'required',
         'body' => 'required',
     );
+    
+    //News Modelに関連付けを行う
+    public function histories()
+    {
+        return $this->hasMany('App\History');
+    }
 }
